@@ -28,7 +28,7 @@ This project now uses docker multistage builds, you need at least docker version
 
 ## Docker
 
-This template uses docker [multistage]](https://www.critiqus.com/post/multi-stage-docker-builds/) builds to make images slimmer and containers only the final project binary and assets with no source code whatsoever.
+This template uses docker [multistage](https://www.critiqus.com/post/multi-stage-docker-builds/) builds to make images slimmer and containers only the final project binary and assets with no source code whatsoever.
 
 Apps run under non root user and also with [dumb-init](https://github.com/Yelp/dumb-init)
 
