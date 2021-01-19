@@ -75,8 +75,6 @@ spec:
         description: Add a CI config to the repo, Gitub Actions, Circle or Travis are the only supported right now
         type: string
         enum:
-          - github
-          - travis
           - circle
           - none
-        default: github
+        default: circle
