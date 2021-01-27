@@ -11,6 +11,5 @@
   "use_git": "n",
   "use_logrus_logging": "y",
   "use_viper_config": "y",
-  "use_cobra_cmd": "y",
-  "use_ci": ["github", "travis", "circle", "none"]
+  "use_cobra_cmd": "y"
 }

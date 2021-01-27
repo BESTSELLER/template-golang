@@ -69,22 +69,6 @@ def remove_cobra_files():
         PROJECT_DIRECTORY, "cmd"
     ))
 
-def remove_circleci_files():
-    """
-    Removes files needed for viper config utils
-    """
-    shutil.rmtree(os.path.join(
-        PROJECT_DIRECTORY, ".circleci"
-    ))
-
-def remove_github_files():
-    """
-    Removes files needed for github utils
-    """
-    shutil.rmtree(os.path.join(
-        PROJECT_DIRECTORY, ".github"
-    ))
-
 # 1. Remove Dockerfiles if docker is not going to be used
 if '{{ cookiecutter.use_docker }}'.lower() != 'y':
     remove_docker_files()
@@ -101,28 +85,13 @@ if '{{ cookiecutter.use_logrus_logging }}'.lower() != 'y':
 if '{{ cookiecutter.use_cobra_cmd }}'.lower() != 'y':
     remove_cobra_files()
 
-# 5. Remove unused ci choice
-if '{{ cookiecutter.use_ci}}'.lower() == 'travis':
-    remove_circleci_files()
-    remove_github_files()
-elif '{{ cookiecutter.use_ci}}'.lower() == 'circle':
-    remove_file(".travis.yml")
-    remove_github_files()
-elif '{{ cookiecutter.use_ci}}'.lower() == 'github':
-    remove_file(".travis.yml")
-    remove_circleci_files()
-else:
-    remove_file(".travis.yml")
-    remove_circleci_files()
-    remove_github_files()
-
-# 6. Remove files depending on selection of mod or dep
+# 5. Remove files depending on selection of mod or dep
 if '{{ cookiecutter.go_mod_or_dep}}'.lower() == 'mod':
     remove_file("Gopkg.toml")
 else:
     remove_file("go.mod")
 
-# 7. Initialize Git (should be run after all file have been modified or deleted)
+# 6. Initialize Git (should be run after all file have been modified or deleted)
 if '{{ cookiecutter.use_git }}'.lower() == 'y':
     init_git()
 else:

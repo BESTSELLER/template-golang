@@ -1,0 +1,2 @@
+reviewers:
+  - {{cookiecutter.destination.git.access}}

@@ -21,7 +21,6 @@ spec:
       - docker_build_image_version
       - use_logrus_logging
       - use_viper_config
-      - use_ci
       - use_cobra_cmd
     properties:
       component_id:
@@ -70,11 +69,4 @@ spec:
           - "y"
           - "n"
         default: "y"
-      use_ci:
-        title: Add CI
-        description: Add a CI config to the repo, Gitub Actions, Circle or Travis are the only supported right now
-        type: string
-        enum:
-          - circle
-          - none
-        default: circle
+
