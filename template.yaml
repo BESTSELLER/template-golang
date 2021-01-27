@@ -8,7 +8,7 @@ metadata:
     - experimental
     - go
 spec:
-  owner: web@example.com
+  owner: engineering-services
   templater: cookiecutter
   type: service
   path: "."
