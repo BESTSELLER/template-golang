@@ -4,7 +4,6 @@
   "project_short_description": "A Golang project.",
   "docker_hub_username": "guest",
   "go_mod_or_dep": "mod",
-  "use_docker": "n",
   "use_git": "n",
   "use_logrus_logging": "y",
   "use_viper_config": "y",

@@ -16,7 +16,6 @@ Powered by [Cookiecutter](https://github.com/audreyr/cookiecutter), Cookiecutter
 - Can use [cobra](https://github.com/spf13/cobra) for cli tools
 - Can use [logrus](https://github.com/sirupsen/logrus) for logging
 - Can create dockerfile for building go binary and dockerfile for final go binary (no code in final container)
-- If docker is used adds docker management commands to makefile
 - Option of TravisCI, CircleCI or None
 
 ## Constraints
@@ -32,11 +31,8 @@ This template uses docker [multistage](https://www.critiqus.com/post/multi-stage
 
 Apps run under non root user and also with [dumb-init](https://github.com/Yelp/dumb-init)
 
-Run `make help` to see the available management commands, or just run `make build` to build your project.
 
 ```console
-$ make help
-$ make build
 $ ./bin/echoserver
 ```
 
