@@ -1,4 +1,4 @@
-module github.com/{{cookiecutter.destination.organization}}/{{cookiecutter.component_id}}
+module github.com/{{cookiecutter.destination.git.organization}}/{{cookiecutter.component_id}}
 
 go 1.15
 
