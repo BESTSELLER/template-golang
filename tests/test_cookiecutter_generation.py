@@ -18,7 +18,6 @@ def context():
         'github_username': 'lacion',
         'app_name': 'MyTestProject',
         'project_short_description': 'A short description of the project.',
-        "docker_hub_username": "lacion",
         "use_git": "y",
         "use_logrus_logging": "y",
         "use_viper_config": "y"

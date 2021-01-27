@@ -7,6 +7,8 @@ metadata:
     github.com/project-slug: {{cookiecutter.destination.git.owner + "/" + cookiecutter.destination.git.name}}
     backstage.io/source-ref: {{cookiecutter.storePath | jsonify}}
     backstage.io/techdocs-ref: url:{{cookiecutter.storePath}}
+    circleci.com/project-slug: github/{{cookiecutter.destination.git.organization}}/{{cookiecutter.destination.git.name}}
+    sonarqube.org/project-key: {{cookiecutter.destination.git.organization}}_{{cookiecutter.destination.git.name}}
 spec:
   type: service
   lifecycle: experimental

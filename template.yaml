@@ -16,9 +16,6 @@ spec:
     required:
       - component_id
       - project_short_description
-      - use_logrus_logging
-      - use_viper_config
-      - use_cobra_cmd
     properties:
       component_id:
         title: Name
@@ -28,25 +25,3 @@ spec:
         title: Description
         type: string
         description: Description of the component
-      use_logrus_logging:
-        title: Enable Logrus Logging (https://github.com/sirupsen/logrus)
-        type: string
-        enum:
-          - "y"
-          - "n"
-        default: "y"
-      use_viper_config:
-        title: Enable Viper Config (https://github.com/spf13/viper)
-        type: string
-        enum:
-          - "y"
-          - "n"
-        default: "y"
-      use_cobra_cmd:
-        title: Enable Cobra CLI Tools (https://github.com/spf13/cobra)
-        type: string
-        enum:
-          - "y"
-          - "n"
-        default: "y"
-

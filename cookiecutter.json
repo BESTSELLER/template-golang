@@ -1,10 +1,5 @@
 {
-  "github_username": "backstage",
+  "github_username": "BESTSELLER",
   "component_id": "mygolangproject",
-  "project_short_description": "A Golang project.",
-  "docker_hub_username": "guest",
-  "use_git": "n",
-  "use_logrus_logging": "y",
-  "use_viper_config": "y",
-  "use_cobra_cmd": "y"
+  "project_short_description": "A Golang project."
 }
