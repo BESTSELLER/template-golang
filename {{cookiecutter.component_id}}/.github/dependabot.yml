@@ -10,4 +10,4 @@ updates:
     schedule:
       interval: "daily"
     reviewers:
-      - {{cookiecutter.destination.git.access}}
+      - {{cookiecutter.access}}
