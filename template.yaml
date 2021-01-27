@@ -16,9 +16,6 @@ spec:
     required:
       - component_id
       - project_short_description
-      - docker_image
-      - docker_build_image
-      - docker_build_image_version
       - use_logrus_logging
       - use_viper_config
       - use_cobra_cmd
@@ -31,23 +28,6 @@ spec:
         title: Description
         type: string
         description: Description of the component
-      docker_image:
-        title: Docker Image
-        type: string
-        description: The docker base image to use when running the service
-        default: alpine-base-image:latest
-      docker_build_image:
-        title: Docker Build Image
-        type: string
-        description: The docker base image to use when building the service
-        default: golang
-      docker_build_image_version:
-        title: Docker Build Image Version
-        description: The image version to use when building the service
-        type: string
-        enum:
-          - alpine
-        default: alpine
       use_logrus_logging:
         title: Enable Logrus Logging (https://github.com/sirupsen/logrus)
         type: string
