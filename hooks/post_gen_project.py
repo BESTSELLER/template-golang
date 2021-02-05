@@ -8,6 +8,8 @@ from __future__ import print_function
 import os
 import shutil
 from subprocess import Popen
+import github as gh
+
 
 # Get the root project directory
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
@@ -36,3 +38,5 @@ def init_git():
 
 
 init_git()
+
+gh.enable_branch_protection("BESTSELLER", PROJECT_DIRECTORY, "master")
