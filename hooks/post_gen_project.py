@@ -60,7 +60,7 @@ def enable_branch_protection(gh_owner, gh_repo, gh_branch):
     if response.status_code < 200 | response.status_code > 299:
         print("status code: {0}\n{1}".format(response.status_code, response.text))
         print("unabled to enable projection on: {0}/{1}:{2}".format(gh_owner, gh_repo, gh_branch))
-        exit(1)
+        # exit(1)
     elif response.status_code == 200:
         print("branch protection has been enabled: {0}/{1}:{2}".format(gh_owner, gh_repo, gh_branch))
 
