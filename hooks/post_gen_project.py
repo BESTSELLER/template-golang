@@ -46,7 +46,7 @@ def enable_branch_protection(gh_owner, gh_repo, gh_branch):
         print('environmental variable GITHUB_TOKEN needs to be set')
         exit(1)
 
-    jsonfile = open("./branch-protection.json", "rb")
+    jsonfile = open(PROJECT_DIRECTORY +"/hooks/branch-protection.json", "rb")
     headers = {
         'authorization': 'token ' + git_hub_token,
         'content-type': 'application/json',
