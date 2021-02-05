@@ -8,7 +8,6 @@ from __future__ import print_function
 import os
 import shutil
 from subprocess import Popen
-import github as gh
 import requests
 import os
 
