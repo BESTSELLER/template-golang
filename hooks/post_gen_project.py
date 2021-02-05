@@ -74,6 +74,6 @@ def find_repo_name(dir):
 
 init_git()
 
-#repo = find_repo_name(PROJECT_DIRECTORY)
+repo = find_repo_name(PROJECT_DIRECTORY)
 
-#enable_branch_protection("BESTSELLER", repo, "master")
+enable_branch_protection("BESTSELLER", repo, "master")
