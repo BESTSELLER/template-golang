@@ -46,14 +46,16 @@ def enable_branch_protection(gh_owner, gh_repo, gh_branch):
         print('environmental variable GITHUB_TOKEN needs to be set')
         exit(1)
 
-    jsonfile = open(os.path.curdir +"/hooks/branch-protection.json", "rb")
+    # jsonfile = open(os.path.curdir +"/hooks/branch-protection.json", "rb")
+    payload = "{\n\t\"restrictions\": null,\n\t\"required_status_checks\": null,\n\t\"enforce_admins\": null,\n\t\"required_pull_request_reviews\": {\n\t\t\"dismiss_stale_reviews\": false,\n\t\t\"require_code_owner_reviews\": false\n\t}\n}"
+
     headers = {
         'authorization': 'token ' + git_hub_token,
         'content-type': 'application/json',
         'Accept': 'application/vnd.github.loki-preview+json'
     }
 
-    response = requests.request("PUT", url, data=jsonfile, headers=headers)
+    response = requests.request("PUT", url, data=payload, headers=headers)
 
     if response.status_code < 200 | response.status_code > 299:
         print("status code: {0}\n{1}".format(response.status_code, response.text))
