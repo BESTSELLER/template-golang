@@ -9,7 +9,7 @@ import os
 import shutil
 from subprocess import Popen
 import requests
-import os
+import re
 
 # Get the root project directory
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
@@ -65,8 +65,15 @@ def enable_branch_protection(gh_owner, gh_repo, gh_branch):
         print("branch protection has been enabled: {0}/{1}:{2}".format(gh_owner, gh_repo, gh_branch))
 
 
+def find_repo_name(dir):
+    regex = r"([^/]*)$"
+    reponame = re.findall(regex, dir)[0]
+    return reponame
+
 
 
 init_git()
 
-enable_branch_protection("BESTSELLER", PROJECT_DIRECTORY, "master")
+repo = find_repo_name(PROJECT_DIRECTORY)
+
+enable_branch_protection("BESTSELLER", repo, "master")
