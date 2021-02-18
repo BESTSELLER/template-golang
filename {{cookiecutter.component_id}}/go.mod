@@ -1,4 +1,4 @@
-module github.com/BESTSELLER/go-templater
+module github.com/{{cookiecutter.destination.git.owner + "/" + cookiecutter.destination.git.name}}
 
 go 1.15
 
