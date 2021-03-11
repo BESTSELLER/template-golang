@@ -1,4 +1,4 @@
-site_name: '{{cookiecutter.component_id}}'
+site_name: '{{cookiecutter.name}}'
 
 nav:
   - Home: index.md

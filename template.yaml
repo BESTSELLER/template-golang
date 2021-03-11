@@ -1,27 +1,58 @@
-apiVersion: backstage.io/v1alpha1
+apiVersion: backstage.io/v1beta2
 kind: Template
 metadata:
   name: golang-starter
-  title: Golang Microservice
-  description: Create a Golang repo with this template built by members of the Go community
+  title: Golang
+  description: Create a Golang repo with this template
   tags:
     - experimental
     - go
 spec:
-  owner: engineering-services
-  templater: cookiecutter
   type: service
-  path: "."
-  schema:
-    required:
-      - component_id
-      - project_short_description
-    properties:
-      component_id:
-        title: Name
-        type: string
-        description: Unique name of the component
-      project_short_description:
-        title: Description
-        type: string
-        description: Description of the component
+  owner: engineering-services
+
+  parameters:
+    - title: Fill in some steps
+      required:
+        - name
+        - project_short_description
+      properties:
+        name:
+          title: Name
+          type: string
+          description: Unique name of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        project_short_description:
+          title: Description
+          type: string
+          description: Description of the component
+
+  steps:
+    - id: fetch-base
+      name: Fetch Base
+      action: fetch:cookiecutter
+      input:
+        url: ./template
+        values:
+          name: '{{ parameters.name }}'
+
+    - id: publish
+      name: Publish
+      action: publish:github
+      input:
+        allowedHosts: ['github.com']
+        description: 'This is {{ parameters.name }}'
+        repoUrl: 'github.com?owner=BESTSELLER&repo={{parameters.name}}'
+
+    - id: register
+      name: Register
+      action: catalog:register
+      input:
+        repoContentsUrl: '{{ steps.publish.output.repoContentsUrl }}'
+        catalogInfoPath: '/catalog-info.yaml'
+
+  output:
+    remoteUrl: '{{ steps.publish.output.remoteUrl }}'
+    entityRef: '{{ steps.register.output.entityRef }}'

@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: {{cookiecutter.component_id}}
+  name: {{cookiecutter.name}}
   description: {{cookiecutter.project_short_description}}
   annotations: 
     github.com/project-slug: {{cookiecutter.destination.git.owner + "/" + cookiecutter.destination.git.name}}
