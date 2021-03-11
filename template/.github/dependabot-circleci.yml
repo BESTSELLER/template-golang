@@ -1,2 +1,2 @@
 reviewers:
-  - {{cookiecutter.access}}
+  - {{github.access}}
