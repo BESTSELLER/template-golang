@@ -35,7 +35,6 @@ jobs:
           paths:
             - report.json
 workflows:
-  version: 2.1
   prod:
     jobs:
       - test:
