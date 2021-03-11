@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1beta2
 kind: Template
 metadata:
-  name: golang
+  name: golang-starter
   title: Golang
   description: Create a Golang repo with this template
   tags:
