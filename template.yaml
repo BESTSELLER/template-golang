@@ -37,6 +37,7 @@ spec:
         url: ./template
         values:
           name: '{{ parameters.name }}'
+          project_short_description: '{{ parameters.project_short_description }}'
 
     - id: publish
       name: Publish
