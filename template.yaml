@@ -5,7 +5,6 @@ metadata:
   title: Golang
   description: Create a Golang repo with this template
   tags:
-    - experimental
     - go
 spec:
   type: service
