@@ -1,6 +1,6 @@
-# PROJECT {{cookiecutter.name}}
+# PROJECT {{ parameters.name }}
 
-{{cookiecutter.project_short_description}}
+{{ parameters.project_short_description }}
 
 Build powerful documentation in your repository 
 
