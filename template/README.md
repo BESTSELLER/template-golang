@@ -1,4 +1,4 @@
-# {{cookiecutter.names}}
+# {{cookiecutter.name}}
 
 {{cookiecutter.project_short_description}}
 
@@ -10,7 +10,7 @@ Running it then should be as simple as:
 
 ```console
 $ go run 
-$ ./bin/{{cookiecutter.names}}
+$ ./bin/{{cookiecutter.name}}
 ```
 
 ### Testing

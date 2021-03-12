@@ -35,7 +35,7 @@ spec:
           title: Access
           type: string
           description: "Who should have access to the repo. If you wanna add a GitHub team, then remember to do it like: 'BESTSELLER/<group-name' eg. 'BESTSELLER/engineering-services'"
-          
+          ui:autofocus: true
       
 
   steps:
