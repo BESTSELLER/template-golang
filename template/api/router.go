@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/{{cookiecutter.destination.git.owner + "/" + cookiecutter.destination.git.name}}/config"
+	"github.com/BESTSELLER/{{cookiecutter.name}}/config"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/prometheus/client_golang/prometheus"

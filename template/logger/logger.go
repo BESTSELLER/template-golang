@@ -3,7 +3,7 @@ package logger
 import (
 	"strings"
 
-	"github.com/{{cookiecutter.destination.git.owner + "/" + cookiecutter.destination.git.name}}/config"
+	"github.com/BESTSELLER/{{cookiecutter.name}}/config"
 	"github.com/rs/zerolog"
 )
 

@@ -1,4 +1,4 @@
-module github.com/{{cookiecutter.destination.git.owner + "/" + cookiecutter.destination.git.name}}
+module github.com/BESTSELLER/{{cookiecutter.name}}
 
 go 1.15
 

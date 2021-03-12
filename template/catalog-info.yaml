@@ -1,15 +1,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: {{ cookiecutter.name }}
-  description: {{ cookiecutter.project_short_description }}
+  name: {{cookiecutter.name}}
+  description: {{cookiecutter.project_short_description}}
   annotations: 
-    github.com/project-slug: {{cookiecutter.destination.git.owner + "/" + cookiecutter.destination.git.name}}
+    github.com/project-slug: BESTSELLER/{{cookiecutter.name}}
     backstage.io/source-ref: {{cookiecutter.storePath | jsonify}}
     backstage.io/techdocs-ref: url:{{cookiecutter.storePath}}
-    circleci.com/project-slug: github/{{cookiecutter.destination.git.organization}}/{{cookiecutter.destination.git.name}}
-    sonarqube.org/project-key: {{cookiecutter.destination.git.organization}}_{{cookiecutter.destination.git.name}}
+    circleci.com/project-slug: github/BESTSELLER/{{cookiecutter.name}}
+    sonarqube.org/project-key: BESTSELLER_{{cookiecutter.name}}
 spec:
   type: service
   lifecycle: experimental
-  owner: {{cookiecutter.owner}}
+  owner: {{cookiecutter.access}}

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/{{cookiecutter.destination.git.owner + "/" + cookiecutter.destination.git.name}}/api"
-	"github.com/{{cookiecutter.destination.git.owner + "/" + cookiecutter.destination.git.name}}/config"
-	"github.com/{{cookiecutter.destination.git.owner + "/" + cookiecutter.destination.git.name}}/logger"
+	"github.com/BESTSELLER/{{cookiecutter.name}}/api"
+	"github.com/BESTSELLER/{{cookiecutter.name}}/config"
+	"github.com/BESTSELLER/{{cookiecutter.name}}/logger"
 )
 
 func main() {
