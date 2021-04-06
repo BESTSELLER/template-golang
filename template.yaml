@@ -34,9 +34,12 @@ spec:
         access:
           title: Access
           type: string
-          description: "Who should have access to the repo. If you wanna add a GitHub team, then remember to do it like: 'BESTSELLER/<group-name' eg. 'BESTSELLER/engineering-services'"
+          description: Who should have access to the repo.
           ui:autofocus: true
-      
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
 
   steps:
     - id: fetch-base
@@ -48,7 +51,6 @@ spec:
           name: '{{ parameters.name }}'
           project_short_description: '{{ parameters.project_short_description }}'
           access: '{{ parameters.access }}'
-
     - id: publish
       name: Publish
       action: publish:github
@@ -57,14 +59,12 @@ spec:
         description: 'This is {{ parameters.name }}'
         repoUrl: 'github.com?owner=BESTSELLER&repo={{parameters.name}}'
         access: '{{ parameters.access }}'
-
     - id: register
       name: Register
       action: catalog:register
       input:
         repoContentsUrl: '{{ steps.publish.output.repoContentsUrl }}'
         catalogInfoPath: '/catalog-info.yaml'
-
   output:
     remoteUrl: '{{ steps.publish.output.remoteUrl }}'
     entityRef: '{{ steps.register.output.entityRef }}'
