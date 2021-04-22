@@ -58,7 +58,7 @@ spec:
         allowedHosts: ['github.com']
         description: 'This is {{ parameters.name }}'
         repoUrl: 'github.com?owner=BESTSELLER&repo={{parameters.name}}'
-        access: '{{ parameters.access }}'
+        access: 'BESTSELLER/{{ parameters.access }}'
     - id: register
       name: Register
       action: catalog:register
