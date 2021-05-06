@@ -59,6 +59,7 @@ spec:
         description: 'This is {{ parameters.name }}'
         repoUrl: 'github.com?owner=BESTSELLER&repo={{parameters.name}}'
         access: 'BESTSELLER/{{ parameters.access }}'
+        repoVisibility: 'private'
     - id: register
       name: Register
       action: catalog:register
