@@ -50,7 +50,7 @@ spec:
         values:
           name: '{{ parameters.name }}'
           project_short_description: '{{ parameters.project_short_description }}'
-          access: '{{ parameters.access }}'
+          access: 'BESTSELLER/{{ parameters.access }}'
     - id: publish
       name: Publish
       action: publish:github
