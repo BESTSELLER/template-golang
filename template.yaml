@@ -44,7 +44,7 @@ spec:
       required:
         - repo
       properties:
-        access:
+        harbor:
           title: Repo
           type: string
           description: Which repo in harbor will the docker image stored.
