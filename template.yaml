@@ -40,6 +40,21 @@ spec:
           ui:options:
             allowedKinds:
               - Group
+    - title: Choose Harbor Repoitory
+      required:
+        - repo
+      properties:
+        access:
+          title: Repo
+          type: string
+          description: Which repo in harbor will the docker image stored.
+          ui:autofocus: true
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Resource
+            allowedTypes:
+              - harbor-repo
 
   steps:
     - id: fetch-base
