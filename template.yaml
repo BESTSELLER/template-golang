@@ -40,7 +40,7 @@ spec:
           ui:options:
             allowedKinds:
               - Group
-    - title: Choose Harbor Repoitory
+    - title: Choose Harbor Repository
       required:
         - repo
       properties:
@@ -52,9 +52,8 @@ spec:
           ui:field: OwnerPicker
           ui:options:
             allowedKinds:
-              - Resource
-            allowedTypes:
               - harbor-repo
+              
 
   steps:
     - id: fetch-base
@@ -66,6 +65,7 @@ spec:
           name: '{{ parameters.name }}'
           project_short_description: '{{ parameters.project_short_description }}'
           access: 'BESTSELLER/{{ parameters.access }}'
+          harbor: ''
     - id: publish
       name: Publish
       action: publish:github
