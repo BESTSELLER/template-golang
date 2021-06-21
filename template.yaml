@@ -48,6 +48,10 @@ spec:
           title: Repo
           type: string
           description: Which repo in harbor will the docker image stored.
+          enum:
+            - "y"
+            - "n"
+          default: "y"
           ui:autofocus: true
           ui:field: OwnerPicker
           ui:options:
