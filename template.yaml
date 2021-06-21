@@ -40,16 +40,16 @@ spec:
           ui:options:
             allowedKinds:
               - Group
-    - title: Choose Harbor Repository
+    - title: Choose your cluster
       required:
-        - repo
+        - gke
       properties:
         gke:
           title: Cluster
           type: string
           description: Which cluster will your application be deployed.
           ui:autofocus: true
-          ui:field: OwnerPicker
+          ui:field: EntityPicker
           ui:options:
             allowedKinds:
               - Resource
@@ -60,7 +60,7 @@ spec:
           type: string
           description: Which repo in harbor will the docker image stored.
           ui:autofocus: true
-          ui:field: OwnerPicker
+          ui:field: EntityPicker
           ui:options:
             allowedKinds:
               - Resource
