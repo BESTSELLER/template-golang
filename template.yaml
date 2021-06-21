@@ -56,7 +56,7 @@ spec:
           ui:field: OwnerPicker
           ui:options:
             allowedKinds:
-              - harbor-repo
+              - Resource
               
 
   steps:
