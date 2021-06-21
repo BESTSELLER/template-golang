@@ -44,20 +44,28 @@ spec:
       required:
         - repo
       properties:
-        harbor:
-          title: Repo
+        gke:
+          title: Cluster
           type: string
-          description: Which repo in harbor will the docker image stored.
-          enum:
-            - "y"
-            - "n"
-          default: "y"
+          description: Which cluster will your application be deployed.
           ui:autofocus: true
           ui:field: OwnerPicker
           ui:options:
             allowedKinds:
               - Resource
-              
+            allowedType:
+              - gke
+        harbor:
+          title: Repo
+          type: string
+          description: Which repo in harbor will the docker image stored.
+          ui:autofocus: true
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Resource
+            allowedType:
+              - harbor-repo
 
   steps:
     - id: fetch-base
